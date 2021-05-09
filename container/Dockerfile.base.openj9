@@ -1,0 +1,12 @@
+FROM registry.access.redhat.com/ubi8/ubi as BUILDER
+
+# Setup openj9 and openjdk 16
+ARG JAVA_LINK="https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16%2B36_openj9-0.25.0/OpenJDK16-jdk_x64_linux_openj9_16_36_openj9-0.25.0.tar.gz"
+RUN curl -L $JAVA_LINK -o /tmp/jdk.tar.gz \
+&& mkdir -p /usr/lib/java \
+&& tar xzf /tmp/jdk.tar.gz -C /usr/lib/java \
+&& mv "/usr/lib/java/$(ls /usr/lib/java/ | head -1)" "/usr/lib/java/jdk"
+
+FROM registry.access.redhat.com/ubi8/ubi
+COPY --from=BUILDER /usr/lib/java/jdk /usr/lib/java/jdk
+ENV PATH="/usr/lib/java/jdk/bin:$PATH"

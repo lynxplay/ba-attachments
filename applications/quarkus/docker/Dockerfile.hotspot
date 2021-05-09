@@ -1,0 +1,6 @@
+FROM lynxplay/ba:hotspot
+
+WORKDIR /app
+COPY target/quarkus-app .
+
+ENTRYPOINT ["java", "-jar", "quarkus-run.jar"]

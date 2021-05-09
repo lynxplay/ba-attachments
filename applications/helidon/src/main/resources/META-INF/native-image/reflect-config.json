@@ -1,0 +1,24 @@
+[
+  {
+    "name": "org.postgresql.PGProperty",
+    "allPublicFields": true
+  },
+  {
+    "name": "java.sql.Statement[]",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredClasses": true,
+    "allPublicClasses": true
+  },
+  {
+    "name": "dev.lynxplay.ba.helidon.ProductRecord",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredClasses": true,
+    "allPublicClasses": true
+  }
+]

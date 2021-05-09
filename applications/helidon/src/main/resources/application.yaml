@@ -1,0 +1,15 @@
+app:
+  greeting: "Hello"
+
+server:
+  port: 8080
+  host: 0.0.0.0
+
+db:
+  source: jdbc
+  connection:
+    url: jdbc:postgresql://postgres:5432/ba
+    username: ba
+    password: ba
+    poolName: hikariPool
+    maximumPoolSize: 500

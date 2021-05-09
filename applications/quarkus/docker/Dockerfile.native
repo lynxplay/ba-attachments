@@ -1,0 +1,6 @@
+FROM registry.access.redhat.com/ubi8/ubi
+
+WORKDIR /app
+COPY target/*-runner application
+
+CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]

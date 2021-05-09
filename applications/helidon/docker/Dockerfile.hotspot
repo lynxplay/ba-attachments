@@ -1,0 +1,7 @@
+FROM lynxplay/ba:hotspot
+
+WORKDIR /app
+COPY target/helidon.jar application.jar
+COPY target/libs libs/
+
+ENTRYPOINT ["java", "-jar", "application.jar"]

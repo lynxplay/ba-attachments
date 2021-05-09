@@ -1,0 +1,10 @@
+# IntelliJ
+.idea/
+*.iml
+
+*target/
+*.mvn/
+
+benchmarking/results/**/*.csv
+
+.env

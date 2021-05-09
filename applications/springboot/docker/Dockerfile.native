@@ -1,0 +1,6 @@
+FROM registry.access.redhat.com/ubi8/ubi
+
+WORKDIR /app
+COPY ./target/springboot application
+
+CMD ["./application"]

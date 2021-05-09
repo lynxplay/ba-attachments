@@ -1,0 +1,6 @@
+FROM lynxplay/ba:hotspot
+
+WORKDIR /app
+COPY target/springboot-*jvm.jar application.jar
+
+ENTRYPOINT ["java", "-jar", "application.jar"]
